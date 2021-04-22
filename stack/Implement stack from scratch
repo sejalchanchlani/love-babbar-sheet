@@ -1,0 +1,55 @@
+
+#include <iostream>
+
+using namespace std;
+class mystack{
+  public:
+  int arr[1000];
+  int top=-1;
+  void push(int data)
+  {
+      if(top==999)
+      {
+          cout<<"stack overflow"<<endl;
+      }
+      else
+      {
+          top=top+1;
+          arr[top]=data;
+      }
+  }
+  void pop()
+  {
+      if(top==-1)
+      {
+          cout<<"stack underflow"<<endl;
+      }
+      else
+      {
+          top=top-1;
+      }
+  }
+  int topvalue()
+  {
+      return arr[top];
+  }
+  void print()
+  {
+      for(int i=top;i>=0;i--)
+      {
+          cout<<arr[i]<<" ";
+      }
+      cout<<endl;
+  }
+};
+int main()
+{
+    mystack stk;
+    stk.push(4);
+    stk.push(4);
+    stk.push(4);
+    stk.push(4);
+    stk.push(3);
+    stk.pop();
+    stk.print();
+}
