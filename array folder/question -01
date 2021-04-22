@@ -1,0 +1,13 @@
+string reverseWord(string str){
+    char c;
+    int j=str.length()-1;
+    for(int i=0;i<str.length()/2;i++)
+    {
+        c=str[i];
+        str[i]=str[j];
+        str[j]=c;
+        j--;
+    }
+    return str;
+  //Your code here
+}
